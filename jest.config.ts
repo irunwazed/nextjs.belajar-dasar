@@ -44,6 +44,8 @@ module.exports = {
   },
   transformIgnorePatterns: [
     '/node_modules/',
+    '/e2e/',
+    '^.+\\.spec\\.^$',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
