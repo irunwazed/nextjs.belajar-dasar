@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/sidebar";
+import { useEffect } from "react";
+import Provider from "./Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,17 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  // console.log("layout", children)
+  // console.log("layout => ", children);
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
-          <div className="grid grid-cols-[250px,_1fr] w-full h-screen">
-            <Sidebar />
-            <div className="bg-indigo-100 text-black overflow-y-scroll">{children}</div>
-          </div>
-        </div>
+      <Provider>
+      {children}
+      </Provider>
       </body>
     </html>
   );
