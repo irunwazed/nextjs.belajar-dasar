@@ -1,12 +1,31 @@
-import { Placeholders } from "../../../../configs"; 
+"use client";
+import { useState } from "react";
+import { Placeholders } from "../../../../configs";
+import { isLetter } from "../../../../configs/utils";
 
-const TextInput = () => {
-    const input = {
-        placeholder: Placeholders.TEXT_INPUT
+const TextInput = ({ onLoginEnter, id }: any) => {
+  const placeholder = {
+    text: Placeholders.TEXT_INPUT,
+  };
+  const [input, setInput] = useState("");
+  const maxValueLength = 100;
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let val = e.target.value;
+    if (isLetter(val) && val.length <= maxValueLength) {
+      setInput(val);
+      onLoginEnter(val);
     }
-    return (
-        <input type="text" placeholder={input.placeholder}/>
-    )
-}
+  };
 
-export default TextInput
+  return (
+    <input
+      id={id}
+      type="text"
+      placeholder={placeholder.text}
+      value={input}
+      onChange={onChangeHandler}
+    />
+  );
+};
+
+export default TextInput;

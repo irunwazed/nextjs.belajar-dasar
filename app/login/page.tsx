@@ -1,4 +1,4 @@
-import LoginForm from "../ui/atoms/molecules/login-form"
+import LoginForm from "../ui/molecules/login-form"
 
 const Login = () => {
     return(
