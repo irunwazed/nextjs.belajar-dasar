@@ -12,7 +12,8 @@ describe("Text Input must render properly", () => {
 
   it("Text Input check is Letter", () => {
     render(<TextInput onLoginEnter={(value)=>value}   />);
-    fireEvent.change(input, {target:{value: '下雨天道路泥泞'}})
-    expect(input).toHaveDisplayValue('')
+    const btnLogin = screen.getByPlaceholderText(Placeholders.TEXT_INPUT);
+    fireEvent.change(btnLogin, {target:{value: '下雨天道路泥泞'}})
+    expect(btnLogin).toHaveDisplayValue('')
   });
 });

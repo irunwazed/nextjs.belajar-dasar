@@ -1,11 +1,11 @@
 import { Placeholders } from "../../../../configs"; 
 
-const PasswordInput = () => {
+const PasswordInput = ({ onLoginEnter, onChange, id }: any) => {
     const input = {
         placeholder: Placeholders.TEXT_PASSWORD
     }
     return (
-        <input type="text" placeholder={input.placeholder}/>
+        <input id={id} type="text" placeholder={input.placeholder}/>
     )
 }
 

@@ -20,3 +20,16 @@ body {
   color: rgb(var(--background-foreground));
   background: rgb(var(--background));
 }
+
+
+input[id='username'],  input[id='password']{
+  @apply px-3 py-2 rounded-lg outline-none text-slate-500;
+}
+
+button[id='btn-login'] {
+  @apply px-8 py-2 bg-indigo-600 text-white rounded-lg shadow-lg mt-5 hover:bg-opacity-80;
+}
+
+label {
+  @apply text-slate-800;
+}
