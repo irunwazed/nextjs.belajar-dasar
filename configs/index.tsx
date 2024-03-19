@@ -1,10 +1,10 @@
-enum Placeholders {
-    TEXT_INPUT = 'Enter Your Login',
-    TEXT_PASSWORD = 'Enter Your Password'
+const Placeholders = {
+    TEXT_INPUT: 'Enter Your Login',
+    TEXT_PASSWORD: 'Enter Your Password'
 }
 
-enum Labels {
-    SUMBIT = 'Login',
+const Labels = {
+    SUMBIT: 'Login',
 }
 
 export {Placeholders, Labels}

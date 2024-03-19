@@ -1,11 +1,11 @@
-import { Labels } from "@/configs"; 
+import { Labels } from "../../../../configs"; 
 
 const BtnLogin = () => {
     const input = {
         placeholder: Labels.SUMBIT
     }
     return (
-        <input type="submit" placeholder={input.placeholder}/>
+        <button type="submit" >{input.placeholder}</button>
     )
 }
 

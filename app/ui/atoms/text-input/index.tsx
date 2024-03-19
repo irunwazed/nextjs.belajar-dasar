@@ -1,4 +1,4 @@
-import { Placeholders } from "@/configs"; 
+import { Placeholders } from "../../../../configs"; 
 
 const TextInput = () => {
     const input = {

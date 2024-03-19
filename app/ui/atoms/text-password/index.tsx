@@ -1,6 +1,6 @@
-import { Placeholders } from "@/configs"; 
+import { Placeholders } from "../../../../configs"; 
 
-const TextPassword = () => {
+const PasswordInput = () => {
     const input = {
         placeholder: Placeholders.TEXT_PASSWORD
     }
@@ -9,4 +9,4 @@ const TextPassword = () => {
     )
 }
 
-export default TextPassword
+export default PasswordInput
